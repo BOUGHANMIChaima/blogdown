@@ -1,6 +1,7 @@
 ---
 # Display name
 title: Chaïma Boughanmi
+avatar_shape: rounded
 
 # Full name (for SEO)
 first_name: Chaïma

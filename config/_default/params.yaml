@@ -21,7 +21,7 @@ marketing:
     description: 'A personnel website using created Hugo.'
     twitter: 'wowchemy'
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-6FJPPZSLBD'
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''  
@@ -36,7 +36,7 @@ header:
     enable: true
     align: l
     show_logo: true
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: true
@@ -45,11 +45,11 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Chaima Boughanmi. This work is licensed under {license}'
+    notice: '© {year} Chaima Boughanmi'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
 
 # Localization
@@ -94,7 +94,7 @@ features:
       app_id: ''
       api_key: ''
       index_name: ''
-      show_logo: false
+      show_logo: true
   map:
     provider: ''
     api_key: ''
@@ -108,6 +108,11 @@ extensions:
     local_backend: false
   academicons:
     enable: true
+    
+    
+# Configuration pour le format du logo d'entreprise
+params:
+  company_logo: "jpg"  
 
 # Security
 

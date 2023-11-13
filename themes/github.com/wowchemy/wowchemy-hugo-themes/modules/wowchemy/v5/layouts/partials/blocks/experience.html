@@ -37,16 +37,19 @@
         <div class="card-body">
 
           {{- if .company_logo}}
-          {{- $svg_icon := resources.Get (printf "media/icons/brands/%s.svg" .company_logo) -}}
-          {{ if not $svg_icon }}{{ errorf "Brand logo not found at `assets/media/icons/brands/%s.svg`" .company_logo }}{{end}}
+          {{- $jpg_icon := resources.Get (printf "media/icons/brands/%s.jpg" .company_logo) -}}
+          {{ if not $jpg_icon }}{{ errorf "Brand logo not found at `assets/media/icons/brands/%s.jpg`" .company_logo }}{{end}}
           <div class="d-flex align-content-start">
             <div class="mr-2 mb-2">
               {{- with .company_url}}<a href="{{.}}" target="_blank" rel="noopener">{{end -}}
-              <img src="{{ $svg_icon.RelPermalink }}" width="56px" height="56px" alt="{{.company | plainify}}" loading="lazy">
+              <img src="{{ $jpg_icon.RelPermalink }}" width="56px" height="56px" alt="{{.company | plainify}}" loading="lazy">
               {{- with .company_url}}</a>{{end -}}
             </div>
             <div>
-          {{ end }}
+          {{ end }} 
+          
+      
+          
 
               <div class="section-subheading card-title exp-title text-muted my-0">{{.title | markdownify | emojify}}</div>
               <div class="section-subheading card-title exp-company text-muted my-0">
