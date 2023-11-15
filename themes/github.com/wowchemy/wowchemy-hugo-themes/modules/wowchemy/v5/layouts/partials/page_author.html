@@ -8,7 +8,7 @@
 
 {{ if and (not .Params.authors) (.Scratch.Get "superuser_username") }}
   {{ $author_page := site.GetPage (printf "/%s/%s" "authors" (.Scratch.Get "superuser_username")) }}
-  {{ partial "page_author_card" (dict "author_page" "/content/authors/") }}
+  {{ partial "page_author_card" (dict "author_page" $author_page) }}
 {{ else if .Params.authors }}
   {{ $taxonomy := "authors" }}
   {{ range $author_obj := (.GetTerms $taxonomy) }}
